@@ -1,3 +1,7 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { UI } from "../i18n/ui";
+import { photoCredits } from "../data/photoCredits";
+
 const ADDRESS = "Carrera 5 nº 04-73, Sandoná, Nariño, Colombia";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
 const PHONE_DISPLAY = "318 308 6879";
@@ -5,10 +9,13 @@ const PHONE_TEL = "+573183086879";
 const INSTAGRAM_URL = "https://www.instagram.com/pueblitoviejo.rest";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = UI[language];
+
   return (
     <footer className="bg-terracotta-900 px-4 py-10 text-center text-cream-100">
       <p className="font-script text-2xl text-brand-pink">Pueblito Viejo</p>
-      <p className="mt-1 font-body text-sm italic text-cream-100/80">Sabor y Tradición</p>
+      <p className="mt-1 font-body text-sm italic text-cream-100/80">{t.tagline}</p>
 
       <div className="mx-auto mt-6 flex max-w-md flex-col items-center gap-3 font-body text-sm text-cream-100/90">
         <a href={MAPS_URL} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand-yellow">
@@ -40,9 +47,21 @@ export function Footer() {
         </a>
       </div>
 
-      <p className="mt-6 font-body text-xs text-cream-100/60">
-        © {new Date().getFullYear()} Restaurante Pueblito Viejo · Sandoná, Nariño
-      </p>
+      <p className="mt-6 font-body text-xs text-cream-100/60">{t.copyright(new Date().getFullYear())}</p>
+
+      <details className="mx-auto mt-4 max-w-md text-left font-body text-xs text-cream-100/50">
+        <summary className="cursor-pointer text-center hover:text-cream-100/80">{t.photoCredits}</summary>
+        <ul className="mt-2 space-y-1">
+          {photoCredits.map((credit) => (
+            <li key={credit.url}>
+              {credit.dish[language]} — {credit.author} ·{" "}
+              <a href={credit.url} target="_blank" rel="noreferrer" className="underline hover:text-cream-100">
+                {credit.license}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
     </footer>
   );
 }

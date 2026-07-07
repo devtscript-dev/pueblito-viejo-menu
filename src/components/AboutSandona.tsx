@@ -1,4 +1,10 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { UI } from "../i18n/ui";
+
 export function AboutSandona() {
+  const { language } = useLanguage();
+  const t = UI[language];
+
   return (
     <section className="relative overflow-hidden bg-cream-100 px-4 py-14">
       <div className="pointer-events-none absolute inset-0 opacity-10">
@@ -7,14 +13,9 @@ export function AboutSandona() {
       </div>
 
       <div className="relative mx-auto max-w-2xl text-center">
-        <p className="font-body text-xs uppercase tracking-[0.3em] text-terracotta-600">Nariño, Colombia</p>
-        <h2 className="font-display mt-2 text-3xl text-terracotta-800">Con orgullo, desde Sandoná</h2>
-        <p className="mt-4 font-body text-terracotta-700/90">
-          Sandoná es conocida como la Capital Nacional del Sombrero de Iraca, cuna de artesanos que tejen a mano
-          esta fibra vegetal desde hace generaciones. Rodeados de montañas y clima templado, en Pueblito Viejo
-          ponemos ese mismo cariño artesanal en cada plato: comida hecha con calma, con tradición y con orgullo
-          por lo nuestro.
-        </p>
+        <p className="font-body text-xs uppercase tracking-[0.3em] text-terracotta-600">{t.sandonaEyebrow}</p>
+        <h2 className="font-display mt-2 text-3xl text-terracotta-800">{t.sandonaHeading}</h2>
+        <p className="mt-4 font-body text-terracotta-700/90">{t.sandonaBody}</p>
       </div>
     </section>
   );
