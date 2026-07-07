@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@import "@fontsource/dancing-script/700.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+
+@theme {
+  /* Paleta tomada del menu fisico: fachada de teja, logo rosa, precios en amarillo/negro,
+     y el salon interior con sombrillas de colores (fiesta pueblerina) */
+  --color-terracotta-900: #3d1a12;
+  --color-terracotta-800: #5a2318;
+  --color-terracotta-700: #7a3220;
+  --color-terracotta-600: #9c4527;
+  --color-terracotta-500: #b85c31;
+  --color-terracotta-400: #d17a45;
+
+  --color-cream-50: #fdf8ee;
+  --color-cream-100: #f7ecd6;
+
+  --color-brand-pink: #e2338c;
+  --color-brand-yellow: #f2d43e;
+
+  --color-umbrella-pink: #ec4899;
+  --color-umbrella-orange: #f97316;
+  --color-umbrella-yellow: #facc15;
+  --color-umbrella-blue: #3b82f6;
+  --color-umbrella-turquoise: #14b8a6;
+  --color-umbrella-green: #4ade80;
+
+  --font-script: "Dancing Script", cursive;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-cream-50);
+  color: var(--color-terracotta-900);
+}
+
+.bg-menu-texture {
+  background-color: var(--color-terracotta-700);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.05), transparent 40%),
+    linear-gradient(160deg, var(--color-terracotta-600) 0%, var(--color-terracotta-800) 100%);
+}
+
+.price-tag {
+  background: #171310;
+  color: var(--color-brand-yellow);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}

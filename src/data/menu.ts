@@ -1,0 +1,240 @@
+import type { MenuCategory } from "./types";
+
+// Contenido transcrito del menu fisico de Restaurante Pueblito Viejo ("Sabor y Tradicion").
+// Este es el set de datos DEMO/base -> luego se reemplazan imagenes/videos y se ajustan precios reales.
+export const menu: MenuCategory[] = [
+  {
+    id: "porciones",
+    name: "Porciones",
+    items: [
+      { id: "costilla-porcion", name: "Costilla", prices: [{ amount: 35000 }] },
+      { id: "carne-porcion", name: "Carne", prices: [{ amount: 30000 }] },
+      { id: "choriza-porcion", name: "Choriza", prices: [{ amount: 31000 }] },
+      { id: "chuleta-porcion", name: "Chuleta", prices: [{ amount: 32000 }] },
+      { id: "chicharron-porcion", name: "Chicharrón", prices: [{ amount: 32000 }] },
+      { id: "arepa-porcion", name: "Arepa", prices: [{ amount: 6000 }] },
+      { id: "crispetas-porcion", name: "Crispetas", prices: [{ amount: 4000 }] },
+      { id: "papa-vapor-porcion", name: "Papa al vapor", prices: [{ amount: 6000 }] },
+      { id: "sopa-porcion", name: "Sopa", prices: [{ amount: 6000 }] },
+      { id: "papa-francesa-porcion", name: "Papa a la francesa", prices: [{ amount: 9000 }] },
+      { id: "patacon-porcion", name: "Patacón", prices: [{ amount: 7000 }] },
+      { id: "arroz-porcion", name: "Arroz", prices: [{ amount: 5000 }] },
+      { id: "maduro-porcion", name: "Maduro", prices: [{ amount: 7000 }] },
+    ],
+  },
+  {
+    id: "bebidas",
+    name: "Bebidas",
+    items: [
+      { id: "micheladas", name: "Micheladas", prices: [{ amount: 10000 }, { amount: 13000 }, { amount: 14000 }] },
+      { id: "cerveza", name: "Cerveza", prices: [{ amount: 10000 }, { amount: 11000 }] },
+      { id: "sodas", name: "Sodas", prices: [{ amount: 7000 }] },
+      { id: "jugo-agua", name: "Jugo natural en agua", prices: [{ amount: 7000 }, { amount: 8000 }] },
+      { id: "botella-agua", name: "Botella de agua", prices: [{ amount: 6000 }] },
+      { id: "jugo-leche", name: "Jugo natural en leche", prices: [{ amount: 9000 }, { amount: 10000 }] },
+      { id: "gaseosa", name: "Gaseosa", prices: [{ amount: 7000 }] },
+      { id: "jugos-hit", name: "Jugos Hit", prices: [{ amount: 7000 }] },
+      { id: "limonada", name: "Limonada", prices: [{ amount: 8000 }] },
+      { id: "jarra-limonada", name: "Jarra de limonada", prices: [{ amount: 14000 }, { amount: 24000 }] },
+    ],
+  },
+  {
+    id: "comida-de-mar",
+    name: "Comida de Mar",
+    items: [
+      {
+        id: "cazuela-mariscos",
+        name: "Cazuela de mariscos",
+        description: "Acompañado con arroz, patacón, ensalada, jugo del día, postre y aguacate.",
+        prices: [{ amount: 60000 }],
+      },
+      {
+        id: "cazuela-camarones",
+        name: "Cazuela de camarones",
+        description: "Acompañado con arroz, patacón, ensalada, jugo del día, postre y aguacate.",
+        prices: [{ amount: 58000 }],
+      },
+      {
+        id: "langostinos-apanados",
+        name: "Langostinos apanados",
+        description: "Acompañado con arroz, patacón, ensalada, jugo del día, postre, aguacate y crema de mariscos.",
+        prices: [{ amount: 72000 }],
+      },
+      {
+        id: "fettuccine-langostinos",
+        name: "Fettuccine con langostinos",
+        description: "Acompañado con arroz, patacón, ensalada, jugo del día, postre, aguacate y crema de mariscos.",
+        prices: [{ amount: 72000 }],
+      },
+    ],
+  },
+  {
+    id: "bandejas",
+    name: "Bandejas",
+    items: [
+      {
+        id: "pollo-ahumado-bandeja",
+        name: "Pollo ahumado",
+        description: "Arroz, tajada de maduro, papa, ensalada, frijol, 1/4 de pollo ahumado.",
+        prices: [{ amount: 32000 }],
+      },
+      {
+        id: "carne-cerdo-bandeja",
+        name: "Carne de cerdo",
+        description: "Arroz, tajada de maduro, papa, ensalada, frijol, 180 grs. de carne de cerdo.",
+        prices: [{ amount: 32000 }],
+      },
+      {
+        id: "gallina-bandeja",
+        name: "Gallina",
+        description: "Arroz, tajada de maduro, papa, ensalada, frijol, 1/4 de gallina.",
+        prices: [{ amount: 32000 }],
+      },
+      {
+        id: "costilla-bandeja",
+        name: "Costilla",
+        description: "Arroz, tajada de maduro, papa, ensalada, frijol, 170 grs. de costilla.",
+        prices: [{ amount: 37000 }],
+      },
+      {
+        id: "choriza-sandonena-bandeja",
+        name: "Choriza sandoneña",
+        description: "Arroz, tajada de maduro, papa, ensalada, frijol, 170 grs. de choriza.",
+        prices: [{ amount: 33000 }],
+      },
+      {
+        id: "chuleta-valluna-bandeja",
+        name: "Chuleta valluna",
+        description: "170 grs. de chuleta de cerdo, arroz, ensalada, papa a la francesa, tajada de maduro.",
+        prices: [{ amount: 34000 }],
+      },
+      {
+        id: "trucha-bandeja",
+        name: "Trucha",
+        description: "Arroz, patacón, 250 grs. de trucha, crispetas, papa al vapor.",
+        prices: [{ amount: 34000 }],
+      },
+      {
+        id: "mojarra-bandeja",
+        name: "Mojarra",
+        description: "Arroz, patacón, 350 grs. de mojarra, crispetas, papa al vapor.",
+        prices: [{ amount: 34000 }],
+      },
+    ],
+  },
+  {
+    id: "almuerzos",
+    name: "Almuerzos",
+    subtitle: "Incluyen sopa, jugo y postre",
+    items: [
+      {
+        id: "pollo-ahumado-almuerzo",
+        name: "Pollo ahumado",
+        description: "Sopa, arroz, tajada de maduro, papa, ensalada, frijol, 1/4 de pollo ahumado, jugo y postre.",
+        prices: [{ amount: 37000 }],
+      },
+      {
+        id: "carne-cerdo-almuerzo",
+        name: "Carne de cerdo",
+        description: "Sopa, arroz, tajada de maduro, papa, ensalada, frijol, 180 grs. de carne de cerdo, jugo y postre.",
+        prices: [{ amount: 37000 }],
+      },
+      {
+        id: "gallina-almuerzo",
+        name: "Gallina",
+        description: "Sopa, arroz, tajada de maduro, papa, ensalada, frijol, 1/4 de gallina, jugo y postre.",
+        prices: [{ amount: 37000 }],
+      },
+      {
+        id: "costilla-almuerzo",
+        name: "Costilla",
+        description: "Sopa, arroz, tajada de maduro, papa, ensalada, frijol, 170 grs. de costilla, jugo y postre.",
+        prices: [{ amount: 39000 }],
+      },
+      {
+        id: "choriza-sandonena-almuerzo",
+        name: "Choriza sandoneña",
+        description: "Sopa, arroz, tajada de maduro, papa, ensalada, frijol, 170 grs. de choriza, jugo y postre.",
+        prices: [{ amount: 38000 }],
+      },
+      {
+        id: "plato-mixto",
+        name: "Plato mixto",
+        description: "Dos porciones que usted elija + sopa, arroz, tajada de maduro, papa, ensalada, frijol, jugo y postre.",
+        prices: [{ amount: 59000 }],
+      },
+      {
+        id: "caldo-de-pata",
+        name: "Caldo de pata",
+        description: "150 grs de pata de res, arroz, aguacate, tajada de plátano, ensalada, papa guisada, jugo y postre.",
+        prices: [{ amount: 35000 }],
+      },
+      {
+        id: "chuleta-valluna-almuerzo",
+        name: "Chuleta valluna",
+        description: "170 grs. de chuleta de cerdo, sopa, arroz, ensalada, papa a la francesa, tajada de maduro, jugo y postre.",
+        prices: [{ amount: 39000 }],
+      },
+      {
+        id: "trucha-almuerzo",
+        name: "Trucha",
+        description: "Sopa, arroz, patacón, 250 grs. de trucha, crispetas, papa al vapor, jugo y postre.",
+        prices: [{ amount: 39000 }],
+      },
+      {
+        id: "mojarra-almuerzo",
+        name: "Mojarra",
+        description: "Sopa, arroz, patacón, 350 grs. de mojarra, crispetas, papa al vapor, jugo y postre.",
+        prices: [{ amount: 39000 }],
+      },
+      {
+        id: "bandeja-paisa",
+        name: "Bandeja paisa",
+        description: "Sopa, arroz, frijol, aguacate, tajada de maduro, chicharrón, huevo frito, choriza sandoneña, carne de cerdo asada, arepa, jugo y postre.",
+        prices: [{ amount: 43000 }],
+      },
+    ],
+  },
+  {
+    id: "desayunos",
+    name: "Desayunos",
+    items: [
+      {
+        id: "corriente",
+        name: "Corriente",
+        description: "Huevos al gusto, tajada de maduro, porción de arroz y café.",
+        prices: [{ amount: 13000 }],
+      },
+      {
+        id: "ejecutivo",
+        name: "Ejecutivo",
+        description: "Huevos al gusto, tajada de maduro, porción de arroz, carne de cerdo y café.",
+        prices: [{ amount: 21000 }],
+      },
+      {
+        id: "ranchero",
+        name: "Ranchero",
+        description: "Huevos al gusto, salchicha ranchera, tajada de maduro, porción de arroz y café.",
+        prices: [{ amount: 18000 }],
+      },
+      {
+        id: "guaicoso",
+        name: "Guaicoso",
+        description: "Arepa, tajada de maduro, porción de arroz, choriza, huevos al gusto y café.",
+        prices: [{ amount: 25000 }],
+      },
+      {
+        id: "pueblito-viejo-desayuno",
+        name: "Pueblito Viejo",
+        description: "Arepa, tajada de maduro, calentado de frijol, choriza, carne de cerdo, 1 huevo, chocolate, tajada de queso, café o jugo.",
+        prices: [{ amount: 32000 }],
+      },
+      {
+        id: "saludable",
+        name: "Saludable",
+        description: "Huevos al gusto, pan integral con mantequilla, fruta picada, café o jugo.",
+        prices: [{ amount: 20000 }],
+      },
+    ],
+  },
+];
