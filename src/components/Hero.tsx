@@ -1,6 +1,15 @@
+import { withBase } from "../utils/publicUrl";
+
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-menu-texture px-4 pb-20 pt-16 text-center">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-menu-texture bg-cover bg-center px-4 pb-20 pt-16 text-center"
+      style={{ backgroundImage: `url(${withBase("/images/interior-panoramica-2.jpg")})` }}
+    >
+      {/* velo oscuro para que el texto resalte sobre la foto del salon, mas fuerte abajo para el texto */}
+      <div className="absolute inset-0 bg-gradient-to-b from-terracotta-900/70 via-terracotta-900/60 to-terracotta-900/85" />
+
       {/* acentos inspirados en las sombrillas de colores del salon */}
       <div className="pointer-events-none absolute inset-0 opacity-20">
         <div className="absolute -left-10 top-6 h-40 w-40 rounded-full bg-umbrella-pink blur-3xl" />
@@ -13,12 +22,20 @@ export function Hero() {
         <h1 className="font-script mt-2 text-6xl text-cream-50 drop-shadow-md sm:text-7xl">Pueblito Viejo</h1>
         <p className="font-display mt-3 italic text-cream-100/90">Sabor y Tradición</p>
 
-        <a
-          href="#porciones"
-          className="mt-8 inline-block rounded-full bg-brand-pink px-8 py-3 font-body font-semibold text-cream-50 shadow-lg transition-transform hover:scale-105"
-        >
-          Ver el menú
-        </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#porciones"
+            className="inline-block rounded-full bg-brand-pink px-8 py-3 font-body font-semibold text-cream-50 shadow-lg transition-transform hover:scale-105"
+          >
+            Ver el menú
+          </a>
+          <a
+            href="#musica"
+            className="inline-block rounded-full border border-cream-100/40 bg-white/10 px-6 py-3 font-body font-semibold text-cream-50 backdrop-blur transition-transform hover:scale-105"
+          >
+            🎤 Cantante en vivo
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { withBase } from "../utils/publicUrl";
 
 interface MediaFrameProps {
   name: string;
@@ -25,7 +26,7 @@ export function MediaFrame({ name, image, video, className = "" }: MediaFramePro
     return (
       <video
         className={`object-cover ${className}`}
-        src={video}
+        src={withBase(video)}
         autoPlay
         loop
         muted
@@ -38,7 +39,7 @@ export function MediaFrame({ name, image, video, className = "" }: MediaFramePro
   return (
     <img
       className={`object-cover ${className}`}
-      src={image}
+      src={withBase(image)}
       alt={name}
       loading="lazy"
       onError={() => setFailed(true)}
