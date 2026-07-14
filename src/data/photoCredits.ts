@@ -11,42 +11,6 @@ export interface PhotoCredit {
 // atribucion. Las de dominio publico / CC0 no requieren credito y no estan aqui.
 export const photoCredits: PhotoCredit[] = [
   {
-    dish: { es: "Arepa", en: "Arepa" },
-    author: "Jdvillalobos",
-    license: "CC BY 3.0",
-    url: "https://commons.wikimedia.org/wiki/File:Barranquilla_arepas_asadas.jpg",
-  },
-  {
-    dish: { es: "Papa al vapor", en: "Steamed Potato" },
-    author: "Cristian Borquez",
-    license: "CC BY 2.0",
-    url: "https://commons.wikimedia.org/wiki/File:Papa_criolla_colombiana.jpg",
-  },
-  {
-    dish: { es: "Papa a la francesa", en: "French Fries" },
-    author: "Thriving Vegetarian",
-    license: "CC BY 2.0",
-    url: "https://commons.wikimedia.org/wiki/File:Perfect_French_Fries_-_11457817933.jpg",
-  },
-  {
-    dish: { es: "Patacón", en: "Patacón" },
-    author: "Arnold Gatilao",
-    license: "CC BY 2.0",
-    url: "https://commons.wikimedia.org/wiki/File:Tostones_-_Arnold_Gatilao.jpg",
-  },
-  {
-    dish: { es: "Arroz", en: "Rice" },
-    author: "Calgary Reviews",
-    license: "CC BY 2.0",
-    url: "https://commons.wikimedia.org/wiki/File:White_rice_at_a_restaurant.jpg",
-  },
-  {
-    dish: { es: "Micheladas", en: "Micheladas" },
-    author: "Will Shenton",
-    license: "CC BY-SA 3.0",
-    url: "https://commons.wikimedia.org/wiki/File:Michelada_Cocktail.jpg",
-  },
-  {
     dish: { es: "Cerveza", en: "Beer" },
     author: "Erik Cleves Kristensen",
     license: "CC BY 2.0",
@@ -54,15 +18,21 @@ export const photoCredits: PhotoCredit[] = [
   },
   {
     dish: { es: "Sodas", en: "Sodas" },
-    author: "Jabbyjobber",
+    author: "Beluwater",
     license: "CC BY-SA 4.0",
-    url: "https://commons.wikimedia.org/wiki/File:San_Pellegrino_bottle_for_sparkling_water_.jpg",
+    url: "https://commons.wikimedia.org/wiki/File:Belu_Bottled_Mineral_Water.jpg",
   },
   {
-    dish: { es: "Jugo natural en agua", en: "Fresh Juice (Water)" },
-    author: "B722N",
+    dish: { es: "Botella de agua", en: "Bottled Water" },
+    author: "Beluwater",
     license: "CC BY-SA 4.0",
-    url: "https://commons.wikimedia.org/wiki/File:Cocktail_of_passion_fruit_juice_and_watermelon_juice_in_a_glass.jpg",
+    url: "https://commons.wikimedia.org/wiki/File:Belu_Bottled_Mineral_Water.jpg",
+  },
+  {
+    dish: { es: "Gaseosa", en: "Soft Drink" },
+    author: "James Larrison",
+    license: "CC BY 2.0",
+    url: "https://commons.wikimedia.org/wiki/File:Coca-Cola_Trio-_Zero_Sugar,_Original,_and_Diet_Coke.jpg",
   },
   {
     dish: { es: "Jugos Hit", en: "Hit Juice Box" },

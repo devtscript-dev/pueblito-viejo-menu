@@ -3,92 +3,6 @@ import type { MenuCategory } from "./types";
 // Contenido transcrito del menu fisico de Restaurante Pueblito Viejo ("Sabor y Tradicion").
 export const menu: MenuCategory[] = [
   {
-    id: "bebidas",
-    name: { es: "Bebidas", en: "Drinks" },
-    items: [
-      {
-        id: "jugo-agua",
-        name: { es: "Jugo natural en agua", en: "Fresh Juice (Water)" },
-        description: {
-          es: "Jugo de fruta natural preparado en agua.",
-          en: "Fresh fruit juice made with water.",
-        },
-        prices: [{ amount: 7000 }, { amount: 8000 }],
-        image: "/images/jugo-agua.jpg",
-      },
-      {
-        id: "jugo-leche",
-        name: { es: "Jugo natural en leche", en: "Fresh Juice (Milk)" },
-        description: {
-          es: "Jugo de fruta natural preparado con leche, cremoso y delicioso.",
-          en: "Fresh fruit juice made with milk, creamy and delicious.",
-        },
-        prices: [{ amount: 9000 }, { amount: 10000 }],
-        image: "/images/jugo-leche.jpg",
-      },
-      {
-        id: "limonada",
-        name: { es: "Limonada", en: "Lemonade" },
-        description: {
-          es: "Limonada natural bien fría, refrescante en cada sorbo.",
-          en: "Ice-cold natural lemonade, refreshing in every sip.",
-        },
-        prices: [{ amount: 8000 }],
-        image: "/images/limonada.jpg",
-      },
-      {
-        id: "jarra-limonada",
-        name: { es: "Jarra de limonada", en: "Lemonade Pitcher" },
-        description: {
-          es: "Jarra de limonada natural para compartir.",
-          en: "Pitcher of natural lemonade to share.",
-        },
-        prices: [{ amount: 14000 }, { amount: 24000 }],
-        image: "/images/jarra-limonada.jpg",
-      },
-      {
-        id: "gaseosa",
-        name: { es: "Gaseosa", en: "Soft Drink" },
-        description: {
-          es: "Gaseosa bien fría a tu elección.",
-          en: "Ice-cold soft drink of your choice.",
-        },
-        prices: [{ amount: 7000 }],
-        image: "/images/gaseosa.jpg",
-      },
-      {
-        id: "sodas",
-        name: { es: "Sodas", en: "Sodas" },
-        description: {
-          es: "Sodas heladas en distintos sabores.",
-          en: "Ice-cold sodas in different flavors.",
-        },
-        prices: [{ amount: 7000 }],
-        image: "/images/sodas.jpg",
-      },
-      {
-        id: "jugos-hit",
-        name: { es: "Jugos Hit", en: "Hit Juice Box" },
-        description: {
-          es: "Jugo de caja Hit, práctico y refrescante.",
-          en: "Hit-brand boxed juice, convenient and refreshing.",
-        },
-        prices: [{ amount: 7000 }],
-        image: "/images/jugos-hit.jpg",
-      },
-      {
-        id: "botella-agua",
-        name: { es: "Botella de agua", en: "Bottled Water" },
-        description: {
-          es: "Agua embotellada, fría y lista para servir.",
-          en: "Bottled water, chilled and ready to serve.",
-        },
-        prices: [{ amount: 6000 }],
-        image: "/images/botella-agua.jpg",
-      },
-    ],
-  },
-  {
     id: "platos-fuertes",
     name: { es: "Platos Fuertes", en: "Main Dishes" },
     groups: [
@@ -158,15 +72,6 @@ export const menu: MenuCategory[] = [
             prices: [{ amount: 59000 }],
             image: "/images/plato-mixto.jpg",
             featured: true,
-          },
-          {
-            id: "caldo-de-pata",
-            name: { es: "Caldo de pata", en: "Beef Trotter Broth" },
-            description: {
-              es: "150 grs de pata de res, arroz, aguacate, tajada de plátano, ensalada, papa guisada, jugo y postre.",
-              en: "150 g of beef trotter, rice, avocado, plantain, salad, stewed potato, juice and dessert.",
-            },
-            prices: [{ amount: 35000 }],
           },
           {
             id: "chuleta-valluna-almuerzo",
@@ -620,6 +525,92 @@ export const menu: MenuCategory[] = [
             image: "/images/desayuno-saludable.jpg",
           },
         ],
+      },
+    ],
+  },
+  {
+    id: "bebidas",
+    name: { es: "Bebidas", en: "Drinks" },
+    items: [
+      {
+        id: "jugo-agua",
+        name: { es: "Jugo natural en agua", en: "Fresh Juice (Water)" },
+        description: {
+          es: "Jugo de fruta natural preparado en agua.",
+          en: "Fresh fruit juice made with water.",
+        },
+        prices: [{ amount: 7000 }, { amount: 8000 }],
+        image: "/images/jugo-agua.jpg",
+      },
+      {
+        id: "jugo-leche",
+        name: { es: "Jugo natural en leche", en: "Fresh Juice (Milk)" },
+        description: {
+          es: "Jugo de fruta natural preparado con leche, cremoso y delicioso.",
+          en: "Fresh fruit juice made with milk, creamy and delicious.",
+        },
+        prices: [{ amount: 9000 }, { amount: 10000 }],
+        image: "/images/jugo-leche.jpg",
+      },
+      {
+        id: "limonada",
+        name: { es: "Limonada", en: "Lemonade" },
+        description: {
+          es: "Limonada natural bien fría, refrescante en cada sorbo.",
+          en: "Ice-cold natural lemonade, refreshing in every sip.",
+        },
+        prices: [{ amount: 8000 }],
+        image: "/images/limonada.jpg",
+      },
+      {
+        id: "jarra-limonada",
+        name: { es: "Jarra de limonada", en: "Lemonade Pitcher" },
+        description: {
+          es: "Jarra de limonada natural para compartir.",
+          en: "Pitcher of natural lemonade to share.",
+        },
+        prices: [{ amount: 14000 }, { amount: 24000 }],
+        image: "/images/jarra-limonada.jpg",
+      },
+      {
+        id: "gaseosa",
+        name: { es: "Gaseosa", en: "Soft Drink" },
+        description: {
+          es: "Coca-Cola normal o Zero, bien fría a tu elección.",
+          en: "Coca-Cola regular or Zero, ice-cold, your choice.",
+        },
+        prices: [{ amount: 7000 }],
+        image: "/images/gaseosa.jpg",
+      },
+      {
+        id: "sodas",
+        name: { es: "Sodas", en: "Sodas" },
+        description: {
+          es: "Soda Bretaña en botella de vidrio, bien helada.",
+          en: "Bretaña soda in a glass bottle, ice-cold.",
+        },
+        prices: [{ amount: 7000 }],
+        image: "/images/sodas.jpg",
+      },
+      {
+        id: "jugos-hit",
+        name: { es: "Jugos Hit", en: "Hit Juice Box" },
+        description: {
+          es: "Jugo de caja Hit, práctico y refrescante.",
+          en: "Hit-brand boxed juice, convenient and refreshing.",
+        },
+        prices: [{ amount: 7000 }],
+        image: "/images/jugos-hit.jpg",
+      },
+      {
+        id: "botella-agua",
+        name: { es: "Botella de agua", en: "Bottled Water" },
+        description: {
+          es: "Agua manantial embotellada, fría y lista para servir.",
+          en: "Bottled spring water, chilled and ready to serve.",
+        },
+        prices: [{ amount: 6000 }],
+        image: "/images/botella-agua.jpg",
       },
     ],
   },

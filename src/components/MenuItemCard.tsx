@@ -20,7 +20,17 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
       }}
       className="flex cursor-pointer gap-4 rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-terracotta-100 transition-shadow hover:shadow-md"
     >
-      <MediaFrame name={name} image={item.image} video={item.video} className="h-20 w-20 shrink-0 rounded-lg" />
+      <div className="relative h-20 w-20 shrink-0">
+        <MediaFrame name={name} image={item.image} video={item.video} className="h-20 w-20 rounded-lg" />
+        <span
+          aria-hidden="true"
+          className="absolute -bottom-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-terracotta-900 text-cream-50 shadow ring-2 ring-white"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+          </svg>
+        </span>
+      </div>
 
       <div className="flex flex-1 flex-col">
         <div className="flex items-start justify-between gap-2">
