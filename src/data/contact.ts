@@ -3,3 +3,5 @@ export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encod
 export const PHONE_DISPLAY = "318 308 6879";
 export const PHONE_TEL = "+573183086879";
 export const INSTAGRAM_URL = "https://www.instagram.com/pueblitoviejo.rest";
+export const TIKTOK_URL = "https://www.tiktok.com/@pueblito.viejo.sa";
+export const FEEDBACK_EMAIL = "jovanalopezorjuela5@gmail.com";

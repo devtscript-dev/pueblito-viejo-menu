@@ -1,6 +1,6 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
-import { INSTAGRAM_URL, MAPS_URL } from "../data/contact";
+import { INSTAGRAM_URL, TIKTOK_URL, MAPS_URL } from "../data/contact";
 
 interface LandingOverlayProps {
   onDismiss: () => void;
@@ -24,15 +24,26 @@ export function LandingOverlay({ onDismiss }: LandingOverlayProps) {
           >
             🍽️ {t.landingMenu}
           </button>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noreferrer"
-            onClick={onDismiss}
-            className="rounded-full border border-cream-100/30 bg-white/10 px-6 py-3 font-body font-semibold text-cream-50 backdrop-blur transition-transform hover:scale-105"
-          >
-            📷 {t.landingSocial}
-          </a>
+          <div className="flex gap-3">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={onDismiss}
+              className="flex-1 rounded-full border border-cream-100/30 bg-white/10 px-4 py-3 font-body font-semibold text-cream-50 backdrop-blur transition-transform hover:scale-105"
+            >
+              📷 Instagram
+            </a>
+            <a
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={onDismiss}
+              className="flex-1 rounded-full border border-cream-100/30 bg-white/10 px-4 py-3 font-body font-semibold text-cream-50 backdrop-blur transition-transform hover:scale-105"
+            >
+              🎵 TikTok
+            </a>
+          </div>
           <a
             href={MAPS_URL}
             target="_blank"

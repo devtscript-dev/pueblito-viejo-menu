@@ -1,7 +1,7 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
 import { photoCredits } from "../data/photoCredits";
-import { ADDRESS, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, INSTAGRAM_URL } from "../data/contact";
+import { ADDRESS, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, INSTAGRAM_URL, TIKTOK_URL } from "../data/contact";
 
 export function Footer() {
   const { language } = useLanguage();
@@ -39,6 +39,13 @@ export function Footer() {
             <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
           </svg>
           @pueblitoviejo.rest
+        </a>
+
+        <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand-yellow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.6 5.82a4.28 4.28 0 0 1-3.08-1.31V15.5a5.7 5.7 0 1 1-4.9-5.65v2.44a3.26 3.26 0 1 0 2.3 3.12V2h2.4a4.28 4.28 0 0 0 3.28 4.1z" />
+          </svg>
+          @pueblito.viejo.sa
         </a>
       </div>
 

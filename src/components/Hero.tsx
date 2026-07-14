@@ -29,7 +29,7 @@ export function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="#porciones"
+            href="#platos-fuertes"
             className="inline-block rounded-full bg-brand-pink px-8 py-3 font-body font-semibold text-cream-50 shadow-lg transition-transform hover:scale-105"
           >
             {t.viewMenu}

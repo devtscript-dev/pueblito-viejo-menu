@@ -5,6 +5,7 @@ import { VideoShowcase } from "./components/VideoShowcase";
 import { LiveMusic } from "./components/LiveMusic";
 import { MenuSection } from "./components/MenuSection";
 import { AboutSandona } from "./components/AboutSandona";
+import { FeedbackSection } from "./components/FeedbackSection";
 import { Footer } from "./components/Footer";
 import { BackgroundMusic } from "./components/BackgroundMusic";
 import { LandingOverlay } from "./components/LandingOverlay";
@@ -27,12 +28,13 @@ function App() {
           <BackgroundMusic />
           <Header categories={menu} />
           <Hero />
-          <VideoShowcase />
           {menu.map((category) => (
             <MenuSection key={category.id} category={category} />
           ))}
           <AboutSandona />
+          <VideoShowcase />
           <LiveMusic />
+          <FeedbackSection />
           <Footer />
         </div>
 
