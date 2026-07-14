@@ -1,6 +1,48 @@
-import type { MenuCategory } from "../data/types";
+import type { MenuCategory, MenuGroup, MenuItem } from "../data/types";
 import { MenuItemCard } from "./MenuItemCard";
 import { useLanguage } from "../i18n/LanguageContext";
+import { withBase } from "../utils/publicUrl";
+
+function ItemGrid({ items }: { items: MenuItem[] }) {
+  return (
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {items.map((item) => (
+        <MenuItemCard key={item.id} item={item} />
+      ))}
+    </div>
+  );
+}
+
+function Group({ group }: { group: MenuGroup }) {
+  const { language } = useLanguage();
+
+  if (group.banner) {
+    return (
+      <div
+        className="mb-10 rounded-3xl bg-cover bg-center p-1 shadow-lg"
+        style={{ backgroundImage: `url(${withBase(group.banner)})` }}
+      >
+        <div className="rounded-[1.35rem] bg-terracotta-900/85 p-5 sm:p-7">
+          <div className="mb-5 text-center">
+            <h3 className="font-display text-2xl text-cream-50">{group.name[language]}</h3>
+            {group.subtitle && <p className="mt-1 font-body text-sm text-cream-100/80">{group.subtitle[language]}</p>}
+          </div>
+          <ItemGrid items={group.items} />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mb-10">
+      <div className="mb-4 text-center">
+        <h3 className="font-display text-2xl text-terracotta-800">{group.name[language]}</h3>
+        {group.subtitle && <p className="mt-1 font-body text-sm text-terracotta-600">{group.subtitle[language]}</p>}
+      </div>
+      <ItemGrid items={group.items} />
+    </div>
+  );
+}
 
 export function MenuSection({ category }: { category: MenuCategory }) {
   const { language } = useLanguage();
@@ -14,11 +56,8 @@ export function MenuSection({ category }: { category: MenuCategory }) {
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {category.items.map((item) => (
-          <MenuItemCard key={item.id} item={item} />
-        ))}
-      </div>
+      {category.items && <ItemGrid items={category.items} />}
+      {category.groups?.map((group) => <Group key={group.id} group={group} />)}
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { withBase } from "../utils/publicUrl";
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
 
-const TRACK = withBase("/audio/soy-colombiano.mp3");
+const TRACK = withBase("/audio/pote-mideros-evocaciones.mp3");
 
 export function BackgroundMusic() {
   const { language } = useLanguage();

@@ -14,6 +14,10 @@ dist-ssr
 
 .claude/
 
+# Fotos fuente sin procesar (alta resolucion); las versiones optimizadas
+# ya usadas en el menu viven directamente en public/images/*.jpg
+public/images/real_images/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

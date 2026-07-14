@@ -15,11 +15,25 @@ export interface MenuItem {
   prices: PriceOption[];
   image?: string;
   video?: string;
+  /** Plato mas pedido / recomendado por la casa -> se muestra con 5 estrellas. */
+  featured?: boolean;
+}
+
+export interface MenuGroup {
+  id: string;
+  name: LocalizedText;
+  subtitle?: LocalizedText;
+  /** Fondo opcional para destacar el grupo (ej. "Recomendacion de la casa"). */
+  banner?: string;
+  items: MenuItem[];
 }
 
 export interface MenuCategory {
   id: string;
   name: LocalizedText;
   subtitle?: LocalizedText;
-  items: MenuItem[];
+  /** Categoria plana. */
+  items?: MenuItem[];
+  /** Categoria con subsecciones (ej. Platos Fuertes -> Almuerzos, Recomendados, Bandejas...). */
+  groups?: MenuGroup[];
 }

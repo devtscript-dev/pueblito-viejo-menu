@@ -1,12 +1,7 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
 import { photoCredits } from "../data/photoCredits";
-
-const ADDRESS = "Carrera 5 nº 04-73, Sandoná, Nariño, Colombia";
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
-const PHONE_DISPLAY = "318 308 6879";
-const PHONE_TEL = "+573183086879";
-const INSTAGRAM_URL = "https://www.instagram.com/pueblitoviejo.rest";
+import { ADDRESS, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, INSTAGRAM_URL } from "../data/contact";
 
 export function Footer() {
   const { language } = useLanguage();
