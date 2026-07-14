@@ -10,7 +10,7 @@ export const UI = {
     cocina: "En la cocina",
     platoEstrella: "Plato estrella",
     gente: "Nuestra gente",
-    atencion: "Atención 5 estrellas",
+    atencion: "Servicio exclusivo",
     musicBadge: "🎤 Tenemos cantante en vivo",
     musicHeading: "La fiesta también se sirve en la mesa",
     musicBody:
@@ -41,7 +41,7 @@ export const UI = {
     cocina: "In the kitchen",
     platoEstrella: "Star dish",
     gente: "Our people",
-    atencion: "5-star service",
+    atencion: "Exclusive service",
     musicBadge: "🎤 We have a live singer",
     musicHeading: "The party is served at the table too",
     musicBody:

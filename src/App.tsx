@@ -28,11 +28,11 @@ function App() {
           <Header categories={menu} />
           <Hero />
           <VideoShowcase />
-          <LiveMusic />
           {menu.map((category) => (
             <MenuSection key={category.id} category={category} />
           ))}
           <AboutSandona />
+          <LiveMusic />
           <Footer />
         </div>
 
