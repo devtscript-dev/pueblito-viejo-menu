@@ -27,7 +27,7 @@ export function FeedbackSection() {
     try {
       const formData = new FormData();
       formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-      formData.append("subject", `Pueblito Viejo — Calificación ${rating}/10`);
+      formData.append("subject", `Pueblito Viejo Sandoná — Calificación ${rating}/10`);
       formData.append("calificacion", `${rating}/10`);
       formData.append("comentario", comment || "(sin comentarios)");
 

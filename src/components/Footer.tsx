@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="bg-terracotta-900 px-4 py-10 text-center text-cream-100">
-      <p className="font-script text-2xl text-brand-pink">Pueblito Viejo</p>
+      <p className="font-script text-2xl text-brand-pink">Pueblito Viejo Sandoná</p>
       <p className="mt-1 font-body text-sm italic text-cream-100/80">{t.tagline}</p>
 
       <div className="mx-auto mt-6 flex max-w-md flex-col items-center gap-3 font-body text-sm text-cream-100/90">

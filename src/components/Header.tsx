@@ -45,7 +45,7 @@ export function Header({ categories }: HeaderProps) {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a href="#top" className="font-script text-2xl text-brand-pink drop-shadow-sm">
-          Pueblito Viejo
+          Pueblito Viejo Sandoná
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">

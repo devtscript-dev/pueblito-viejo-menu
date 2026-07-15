@@ -13,7 +13,7 @@ export function LandingOverlay({ onDismiss }: LandingOverlayProps) {
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-terracotta-900/60 p-4">
       <div className="w-full max-w-sm rounded-3xl bg-terracotta-900/95 p-8 text-center shadow-2xl ring-1 ring-cream-100/10">
-        <p className="font-script text-4xl text-brand-pink">Pueblito Viejo</p>
+        <p className="font-script text-3xl text-brand-pink">Pueblito Viejo Sandoná</p>
         <p className="mt-1 font-body text-sm italic text-cream-100/80">{t.tagline}</p>
 
         <div className="mt-8 flex flex-col gap-3">
