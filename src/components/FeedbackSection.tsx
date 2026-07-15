@@ -25,15 +25,17 @@ export function FeedbackSection() {
     setStatus("sending");
 
     try {
+      const formData = new FormData();
+      formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      formData.append("subject", `Pueblito Viejo — Calificación ${rating}/10`);
+      formData.append("calificacion", `${rating}/10`);
+      formData.append("comentario", comment || "(sin comentarios)");
+
+      // FormData se envia como multipart/form-data sin cabeceras extra: es un "simple
+      // request" para CORS (sin preflight OPTIONS), que es lo que Web3Forms espera.
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Pueblito Viejo — Calificación ${rating}/10`,
-          calificacion: `${rating}/10`,
-          comentario: comment || "(sin comentarios)",
-        }),
+        body: formData,
       });
       const result = await response.json();
       setStatus(result.success ? "success" : "error");
