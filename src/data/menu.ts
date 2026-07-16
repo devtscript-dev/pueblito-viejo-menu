@@ -571,7 +571,7 @@ export const menu: MenuCategory[] = [
         },
         prices: [
           { amount: 14000, label: { es: "Jarra pequeña", en: "Small pitcher" } },
-          { amount: 24000, label: { es: "Jarra 4 vasos aprox.", en: "Pitcher, approx. 4 glasses" } },
+          { amount: 24000, label: { es: "Jarra 4-6 vasos aprox.", en: "Pitcher, approx. 4-6 glasses" } },
         ],
         image: "/images/jarra-limonada.jpg",
       },
