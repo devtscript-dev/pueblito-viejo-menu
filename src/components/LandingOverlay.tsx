@@ -1,6 +1,7 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
 import { INSTAGRAM_URL, TIKTOK_URL, MAPS_URL } from "../data/contact";
+import { Logo } from "./Logo";
 
 interface LandingOverlayProps {
   onDismiss: () => void;
@@ -13,7 +14,7 @@ export function LandingOverlay({ onDismiss }: LandingOverlayProps) {
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-terracotta-900/60 p-4">
       <div className="w-full max-w-sm rounded-3xl bg-terracotta-900/95 p-8 text-center shadow-2xl ring-1 ring-cream-100/10">
-        <p className="font-script text-3xl text-brand-pink">Pueblito Viejo Sandoná</p>
+        <Logo className="mx-auto h-24 w-auto" />
         <p className="mt-1 font-body text-sm italic text-cream-100/80">{t.tagline}</p>
 
         <div className="mt-8 flex flex-col gap-3">

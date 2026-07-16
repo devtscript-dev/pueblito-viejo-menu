@@ -2,6 +2,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
 import { photoCredits } from "../data/photoCredits";
 import { ADDRESS, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, INSTAGRAM_URL, TIKTOK_URL } from "../data/contact";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const { language } = useLanguage();
@@ -9,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="bg-terracotta-900 px-4 py-10 text-center text-cream-100">
-      <p className="font-script text-2xl text-brand-pink">Pueblito Viejo Sandoná</p>
+      <Logo className="mx-auto h-24 w-auto" />
       <p className="mt-1 font-body text-sm italic text-cream-100/80">{t.tagline}</p>
 
       <div className="mx-auto mt-6 flex max-w-md flex-col items-center gap-3 font-body text-sm text-cream-100/90">

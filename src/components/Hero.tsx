@@ -1,6 +1,7 @@
 import { withBase } from "../utils/publicUrl";
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
+import { Logo } from "./Logo";
 
 export function Hero() {
   const { language } = useLanguage();
@@ -23,8 +24,7 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-2xl">
-        <p className="font-body text-xs uppercase tracking-[0.3em] text-brand-yellow">{t.restaurant}</p>
-        <h1 className="font-script mt-2 text-5xl text-cream-50 drop-shadow-md sm:text-6xl">Pueblito Viejo Sandoná</h1>
+        <Logo className="mx-auto h-40 w-auto drop-shadow-lg sm:h-52" />
         <p className="font-display mt-3 italic text-cream-100/90">{t.tagline}</p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

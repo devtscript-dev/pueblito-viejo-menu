@@ -1,6 +1,5 @@
 export const UI = {
   es: {
-    restaurant: "Restaurante",
     tagline: "Sabor y Tradición",
     viewMenu: "Ver el menú",
     liveSinger: "🎤 Cantante en vivo",
@@ -43,7 +42,6 @@ export const UI = {
     feedbackError: "No pudimos enviar tu mensaje. Intenta de nuevo o escríbenos directo a",
   },
   en: {
-    restaurant: "Restaurant",
     tagline: "Flavor & Tradition",
     viewMenu: "View menu",
     liveSinger: "🎤 Live singer",

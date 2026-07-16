@@ -17,6 +17,7 @@ dist-ssr
 # Fotos fuente sin procesar (alta resolucion); las versiones optimizadas
 # ya usadas en el menu viven directamente en public/images/*.jpg
 public/images/real_images/
+public/images/logo/
 
 # Editor directories and files
 .vscode/*

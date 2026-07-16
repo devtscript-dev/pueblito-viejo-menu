@@ -441,7 +441,7 @@ export const menu: MenuCategory[] = [
           es: "Cerveza bien fría, ideal para acompañar tu plato.",
           en: "Ice-cold beer, perfect with your meal.",
         },
-        prices: [{ amount: 10000 }, { amount: 11000 }],
+        prices: [{ amount: 11000 }],
         image: "/images/cerveza.jpg",
       },
       {
@@ -451,7 +451,7 @@ export const menu: MenuCategory[] = [
           es: "Cerveza preparada con limón, sal y un toque especial de la casa.",
           en: "Beer prepared with lime, salt and our house's special touch.",
         },
-        prices: [{ amount: 10000 }, { amount: 13000 }, { amount: 14000 }],
+        prices: [{ amount: 14000 }],
         image: "/images/micheladas.jpg",
       },
     ],

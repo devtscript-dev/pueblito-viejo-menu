@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { MenuCategory } from "../data/types";
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
+import { Logo } from "./Logo";
 
 interface HeaderProps {
   categories: MenuCategory[];
@@ -44,8 +45,8 @@ export function Header({ categories }: HeaderProps) {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <a href="#top" className="font-script text-2xl text-brand-pink drop-shadow-sm">
-          Pueblito Viejo Sandoná
+        <a href="#top" className="shrink-0">
+          <Logo className="h-12 w-auto sm:h-14" />
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">
