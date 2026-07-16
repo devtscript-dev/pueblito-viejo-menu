@@ -539,7 +539,7 @@ export const menu: MenuCategory[] = [
           es: "Jugo de fruta natural preparado en agua.",
           en: "Fresh fruit juice made with water.",
         },
-        prices: [{ amount: 7000 }, { amount: 8000 }],
+        prices: [{ amount: 8000 }],
         image: "/images/jugo-agua.jpg",
       },
       {
@@ -549,7 +549,7 @@ export const menu: MenuCategory[] = [
           es: "Jugo de fruta natural preparado con leche, cremoso y delicioso.",
           en: "Fresh fruit juice made with milk, creamy and delicious.",
         },
-        prices: [{ amount: 9000 }, { amount: 10000 }],
+        prices: [{ amount: 10000 }],
         image: "/images/jugo-leche.jpg",
       },
       {
@@ -569,7 +569,10 @@ export const menu: MenuCategory[] = [
           es: "Jarra de limonada natural para compartir.",
           en: "Pitcher of natural lemonade to share.",
         },
-        prices: [{ amount: 14000 }, { amount: 24000 }],
+        prices: [
+          { amount: 14000, label: { es: "Jarra pequeña", en: "Small pitcher" } },
+          { amount: 24000, label: { es: "Jarra 4 vasos aprox.", en: "Pitcher, approx. 4 glasses" } },
+        ],
         image: "/images/jarra-limonada.jpg",
       },
       {

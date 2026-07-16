@@ -35,11 +35,16 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
       <div className="flex flex-1 flex-col">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-display text-lg leading-tight text-terracotta-900">{name}</h3>
-          <div className="flex shrink-0 flex-wrap justify-end gap-1">
+          <div className="flex shrink-0 flex-wrap justify-end gap-2">
             {item.prices.map((p, i) => (
-              <span key={i} className="price-tag rounded px-2 py-0.5 text-sm">
-                {formatPrice(p.amount)}
-              </span>
+              <div key={i} className="flex flex-col items-center gap-0.5">
+                {p.label && (
+                  <span className="text-center font-body text-[10px] font-medium leading-none text-terracotta-600">
+                    {p.label[language]}
+                  </span>
+                )}
+                <span className="price-tag rounded px-2 py-0.5 text-sm">{formatPrice(p.amount)}</span>
+              </div>
             ))}
           </div>
         </div>

@@ -1,11 +1,12 @@
-export interface PriceOption {
-  amount: number;
-  label?: string;
-}
-
 export interface LocalizedText {
   es: string;
   en: string;
+}
+
+export interface PriceOption {
+  amount: number;
+  /** Ej. "Pequeña" / "Jarra 4 vasos aprox." para distinguir tamaños con precios distintos. */
+  label?: LocalizedText;
 }
 
 export interface MenuItem {
