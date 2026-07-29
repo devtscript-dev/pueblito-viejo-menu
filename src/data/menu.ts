@@ -200,8 +200,8 @@ export const menu: MenuCategory[] = [
             id: "chuleta-valluna-bandeja",
             name: { es: "Chuleta valluna", en: "Valluna-style Pork Chop" },
             description: {
-              es: "170 grs. de chuleta de cerdo, arroz, ensalada, papa a la francesa, tajada de maduro.",
-              en: "170 g breaded pork chop, rice, salad, french fries, sweet plantain.",
+              es: "170 grs. de chuleta de cerdo, arroz, papa a la francesa, tajada de maduro.",
+              en: "170 g breaded pork chop, rice, french fries, sweet plantain.",
             },
             prices: [{ amount: 34000 }],
             image: "/images/chuleta-valluna-plato.jpg",
@@ -299,8 +299,8 @@ export const menu: MenuCategory[] = [
             id: "chuleta-valluna-almuerzo",
             name: { es: "Chuleta valluna", en: "Valluna-style Pork Chop" },
             description: {
-              es: "170 grs. de chuleta de cerdo, sopa, arroz, ensalada, papa a la francesa, tajada de maduro, jugo y postre.",
-              en: "170 g breaded pork chop, soup, rice, salad, french fries, sweet plantain, juice and dessert.",
+              es: "170 grs. de chuleta de cerdo, sopa, arroz, papa a la francesa, tajada de maduro, jugo y postre.",
+              en: "170 g breaded pork chop, soup, rice, french fries, sweet plantain, juice and dessert.",
             },
             prices: [{ amount: 39000 }],
             image: "/images/chuleta-valluna-plato.jpg",
