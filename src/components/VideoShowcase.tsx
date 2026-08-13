@@ -62,7 +62,7 @@ export function VideoShowcase() {
 
       <div className="relative mt-8">
         <motion.div
-          className="relative flex h-64 items-center justify-center sm:h-80"
+          className="relative flex h-64 items-center justify-center overflow-hidden sm:h-80"
           style={{ perspective: 1200 }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}

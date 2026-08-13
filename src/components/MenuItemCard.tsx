@@ -37,14 +37,14 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
           </svg>
         </span>
-        <div className="absolute -top-2 right-1 flex flex-col items-end gap-1">
+        <div className="absolute -top-2 right-0 flex max-w-[85%] flex-col items-end gap-1">
           {item.prices.map((p, i) => (
             <span
               key={i}
-              className="price-tag shadow-luxe whitespace-nowrap rounded px-1.5 py-0.5 text-[10px] font-semibold ring-2 ring-white"
+              className="price-tag shadow-luxe flex flex-col items-center rounded px-1.5 py-0.5 leading-tight ring-2 ring-white"
             >
-              {p.label && `${p.label[language]} `}
-              {formatPrice(p.amount)}
+              {p.label && <span className="text-[8px] font-medium">{p.label[language]}</span>}
+              <span className="text-[10px] font-semibold">{formatPrice(p.amount)}</span>
             </span>
           ))}
         </div>
