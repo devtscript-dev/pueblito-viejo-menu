@@ -13,6 +13,7 @@
     "@fontsource/dancing-script": "^5.2.8",
     "@fontsource/outfit": "^5.2.8",
     "@fontsource/playfair-display": "^5.2.8",
+    "motion": "^13.1.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },

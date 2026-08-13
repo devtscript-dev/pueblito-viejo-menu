@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { CategoryTabs } from "./components/CategoryTabs";
 import { VideoShowcase } from "./components/VideoShowcase";
 import { LiveMusic } from "./components/LiveMusic";
 import { MenuSection } from "./components/MenuSection";
@@ -28,9 +29,12 @@ function App() {
           <BackgroundMusic />
           <Header categories={menu} />
           <Hero />
-          {menu.map((category) => (
-            <MenuSection key={category.id} category={category} />
-          ))}
+          <div className="relative">
+            <CategoryTabs categories={menu} />
+            {menu.map((category) => (
+              <MenuSection key={category.id} category={category} />
+            ))}
+          </div>
           <AboutSandona />
           <VideoShowcase />
           <LiveMusic />

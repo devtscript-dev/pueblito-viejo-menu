@@ -53,7 +53,7 @@ export function MediaFrame({ name, image, video, className = "" }: MediaFramePro
   if (video) {
     return (
       <video
-        className={`object-cover ${className}`}
+        className={`media-tone object-cover ${className}`}
         src={withBase(video)}
         autoPlay
         loop
@@ -67,7 +67,7 @@ export function MediaFrame({ name, image, video, className = "" }: MediaFramePro
 
   return (
     <img
-      className={`object-cover ${className}`}
+      className={`media-tone object-cover ${className}`}
       src={withBase(image)}
       alt={name}
       loading="lazy"

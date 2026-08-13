@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import type { MenuCategory } from "../data/types";
 import { useLanguage } from "../i18n/LanguageContext";
 import { UI } from "../i18n/ui";
@@ -54,9 +55,10 @@ export function Header({ categories }: HeaderProps) {
             <button
               key={c.id}
               onClick={() => goTo(c.id)}
-              className="font-body text-sm font-medium text-cream-100 hover:text-brand-yellow transition-colors"
+              className="group relative font-body text-sm font-medium text-cream-100 hover:text-brand-yellow transition-colors"
             >
               {c.name[language]}
+              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-brand-yellow transition-transform duration-300 group-hover:scale-x-100" />
             </button>
           ))}
           <LanguageToggle />
@@ -72,19 +74,29 @@ export function Header({ categories }: HeaderProps) {
         </div>
       </div>
 
-      {open && (
-        <nav className="flex flex-col gap-1 bg-terracotta-900 px-4 pb-4 md:hidden">
-          {categories.map((c) => (
-            <button
-              key={c.id}
-              onClick={() => goTo(c.id)}
-              className="rounded-lg px-3 py-2 text-left text-cream-100 hover:bg-terracotta-700"
-            >
-              {c.name[language]}
-            </button>
-          ))}
-        </nav>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col gap-1 overflow-hidden bg-terracotta-900 px-4 md:hidden"
+          >
+            <div className="flex flex-col gap-1 pb-4">
+              {categories.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => goTo(c.id)}
+                  className="rounded-lg px-3 py-2 text-left text-cream-100 hover:bg-terracotta-700"
+                >
+                  {c.name[language]}
+                </button>
+              ))}
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
