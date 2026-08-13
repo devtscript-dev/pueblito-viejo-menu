@@ -51,6 +51,9 @@ export function Footer() {
       </div>
 
       <p className="mt-6 font-body text-xs text-cream-100/60">{t.copyright(new Date().getFullYear())}</p>
+      <p className="mt-1 font-body text-xs text-cream-100/60">
+        {t.poweredBy} <span className="font-semibold text-brand-yellow">DevtScript</span>
+      </p>
 
       <details className="mx-auto mt-4 max-w-md text-left font-body text-xs text-cream-100/50">
         <summary className="cursor-pointer text-center hover:text-cream-100/80">{t.photoCredits}</summary>

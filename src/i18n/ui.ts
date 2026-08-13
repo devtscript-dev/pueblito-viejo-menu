@@ -19,6 +19,7 @@ export const UI = {
     sandonaBody:
       "Sandoná es conocida como la Capital Nacional del Sombrero de Iraca, cuna de artesanos que tejen a mano esta fibra vegetal desde hace generaciones. Rodeados de montañas y clima templado, en Pueblito Viejo Sandoná ponemos ese mismo cariño artesanal en cada plato: comida hecha con calma, con tradición y con orgullo por lo nuestro.",
     copyright: (year: number) => `© ${year} Restaurante Pueblito Viejo Sandoná · Nariño, Colombia`,
+    poweredBy: "Desarrollado por",
     muteMusic: "Silenciar música",
     unmuteMusic: "Activar música",
     photoCredits: "Créditos de fotografías",
@@ -61,6 +62,7 @@ export const UI = {
     sandonaBody:
       "Sandoná is known as Colombia's National Capital of the Iraca Straw Hat, home to artisans who have hand-woven this plant fiber for generations. Surrounded by mountains and mild weather, at Pueblito Viejo Sandoná we put that same handcrafted care into every dish: food made slowly, with tradition, and with pride in who we are.",
     copyright: (year: number) => `© ${year} Pueblito Viejo Sandoná Restaurant · Nariño, Colombia`,
+    poweredBy: "Developed by",
     muteMusic: "Mute music",
     unmuteMusic: "Turn on music",
     photoCredits: "Photo credits",
